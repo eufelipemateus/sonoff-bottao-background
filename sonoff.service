@@ -11,5 +11,5 @@ ExecStart=/etc/sonoff/sonoff.sh start
 ExecStop=/etc/sonoff/sonoff.sh stop
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
 

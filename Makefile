@@ -12,7 +12,7 @@ clean-build:
 	> @rm --force --recursive dist/
 
 
-install: build
+install: build clean-build
 
 	mkdir ${CHROOT}
 	
@@ -24,3 +24,6 @@ install: build
 
 	chmod 777  /usr/local/bin/${name}
 	chmod 777 ${CHROOT}/sonoff.sh
+	systemctl --user daemon-reload
+	systemctl --user enable ${name}.service
+	systemctl --user start ${name}.service

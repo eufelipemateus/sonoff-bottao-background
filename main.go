@@ -25,7 +25,7 @@ func main() {
 	session, err := instance.AuthenticateWithEmail(
 		context.Background(),
 		ewelink.NewConfiguration(
-			"eu",
+			"us",
 			ewelink.WithAppID(config.GetAppId()),
 			ewelink.WithAppSecret(config.GetAppSecrert()),
 		),
